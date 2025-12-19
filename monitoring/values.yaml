@@ -1,13 +1,14 @@
 kube-prometheus-stack:
   grafana:
-    adminPassword: "admin"  # Change this for production!
+    adminPassword: "admin"
     service:
       type: NodePort
 
   prometheus:
     prometheusSpec:
-      retention: 5d  # Keep metrics for 5 days to save local disk space
+      retention: 5d
 
+  # NOTICE: This is now indented to match 'grafana' and 'prometheus' above
   nodeExporter:
-      hostRootFsMount:
-        enabled: false
+    hostRootFsMount:
+      enabled: false
