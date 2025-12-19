@@ -7,3 +7,7 @@ kube-prometheus-stack:
   prometheus:
     prometheusSpec:
       retention: 5d  # Keep metrics for 5 days to save local disk space
+
+  nodeExporter:
+      hostRootFsMount:
+        enabled: false
